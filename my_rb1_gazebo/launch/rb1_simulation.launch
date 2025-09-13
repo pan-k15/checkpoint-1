@@ -2,7 +2,7 @@
 <launch>
 
     <!-- roslaunch arguments -->
-	<arg name="world_name" default="$(find gazebo_ros)/worlds/empty.world"/>
+	<arg name="world_name" default="$(find gazebo_extra_worlds)/worlds/warehouse_environment.world"/>
     
     <!-- Include empty_world.launch with specific arguments -->
 	<include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -15,8 +15,8 @@
 	</include>
 
     <!-- Spawn Coordinates -->
-    <arg name="x" default="0.0"/>
-    <arg name="y" default="0.0"/>
+    <arg name="x" default="-0.3"/>
+    <arg name="y" default="-1.3"/>
     <arg name="z" default="0.0"/>
 
     <arg name="model_name" default="my_robot"/>
