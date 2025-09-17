@@ -36,8 +36,8 @@ class RotateService:
         prev_yaw = start_yaw
 
         # Angular speed to complete rotation in ~3 sec
-        angular_speed = abs(target_angle) / 3.0
-        angular_speed = max(0.2, min(angular_speed, 1.5))  # clamp speed
+        angular_speed = abs(target_angle) / 2.0
+        angular_speed = max(0.3, min(angular_speed, 1.5))  # clamp speed
         rospy.loginfo("[ROTATE SERVICE] Angular speed set to %.2f rad/s" % angular_speed)
 
         while not rospy.is_shutdown() and abs(turned) < abs(target_angle) - math.radians(2):
